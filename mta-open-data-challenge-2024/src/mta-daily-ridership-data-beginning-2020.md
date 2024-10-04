@@ -9,11 +9,13 @@ toc: false
 <!-- Load and transform the data -->
 
 ```js
-const mtaDailyRidershipData= FileAttachment("data/mta-daily-ridership-data-beginning-2020.json").json();
+const mtaDailyRidershipData = FileAttachment("data/mta-daily-ridership-data-beginning-2020.json").json();
 ```
-
-<!-- A shared color scale for consistency, sorted by the number of launches -->
 
 ```js
 display(mtaDailyRidershipData)
+```
+
+```js
+Plot.line(mtaDailyRidershipData.map((d) => [d.date, d.ster])).plot()
 ```
