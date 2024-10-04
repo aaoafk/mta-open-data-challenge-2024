@@ -25,7 +25,7 @@ npm install # if you're using npm
 bun install # if you're using bun
 ```
 After installing the dependencies you can initialize a local version
-of the web repository with:
+of the web application with:
 
 ```bash
 pnpm dev # if you're using pnpm
