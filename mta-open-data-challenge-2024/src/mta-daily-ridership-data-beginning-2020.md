@@ -17,7 +17,7 @@ const mtaDailyRidershipData = FileAttachment("data/mta-daily-ridership-data-begi
 <!-- display(mtaDailyRidershipData) -->
 <!-- ``` -->
 
-## MTA Daily Ridership Data as a line
+## MTA Daily Ridership Data As Dots
 
 <!-- TODO: this doesn't really make sense to display as a line chart -->
 <!-- it should definitely be visualized in some other way -->
