@@ -1,4 +1,4 @@
-# Mta Open Data Challenge 2024
+# MTA Open Data Challenge 2024
 
 This is an [Observable Framework](https://observablehq.com/framework) app. To start the local preview server, run:
 
