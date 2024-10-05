@@ -19,6 +19,7 @@ const mtaDailyRidershipData = FileAttachment("data/mta-daily-ridership-data-begi
 
 ## MTA Daily Ridership Data Dots
 
+<!-- TODO: Display markers for when COVID pandemic starts and ends -->
 ```js
 Plot.plot({
 	width: 1000,
