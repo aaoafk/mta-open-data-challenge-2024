@@ -17,10 +17,8 @@ const mtaDailyRidershipData = FileAttachment("data/mta-daily-ridership-data-begi
 <!-- display(mtaDailyRidershipData) -->
 <!-- ``` -->
 
-## MTA Daily Ridership Data As Dots
+## MTA Daily Ridership Data Dots
 
-<!-- TODO: this doesn't really make sense to display as a line chart -->
-<!-- it should definitely be visualized in some other way -->
 ```js
 Plot.plot({
 	width: 1000,
@@ -29,8 +27,7 @@ Plot.plot({
 		type: "utc",
 		label: "Date",
 		domain: d3.extent(mtaDailyRidershipData, d => d.date),
-		tickFormat: d3.timeFormat("%b %d, %Y"),  // Format: "Mon DD, YYYY"
-		ticks: d3.timeDay.every(7)  // Show ticks every 7 days
+		tickFormat: d3.timeFormat("%b %d, %Y")  // Format: "Mon DD, YYYY"
 	},
 	y: {
 		tickFormat: d3.format(".2s"),  // Use SI-prefix notation (e.g., 1M for 1 million)
@@ -44,3 +41,30 @@ Plot.plot({
 	]
 })
 ```
+
+## MTA Daily Ridership Data Line
+
+```js
+Plot.plot({
+	width: 1000,
+	height: 1000,
+	x: {
+		type: "utc",
+		label: "Date",
+		domain: d3.extent(mtaDailyRidershipData, d => d.date),
+		tickFormat: d3.timeFormat("%b, %Y") // Format: "Month, YYYY"
+	},
+	y: {
+		tickFormat: d3.format(".2s"),  // Use SI-prefix notation (e.g., 1M for 1 million)
+		ticks: 10,  // Adjust the number of ticks as needed
+		domain: d3.extent(mtaDailyRidershipData, (d) => d.ster),
+		interval: 5000,
+		label: "Subway total Estimated Ridership"
+	},
+	marks: [
+		Plot.line(mtaDailyRidershipData, {x: "date", y: "ster"})
+	]
+})
+```
+
+##
