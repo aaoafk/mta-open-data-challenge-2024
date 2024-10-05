@@ -34,10 +34,10 @@ Plot.plot({
 		ticks: 10,  // Adjust the number of ticks as needed
 		domain: d3.extent(mtaDailyRidershipData, (d) => d.ster),
 		interval: 5000,
-		label: "Subway total Estimated Ridership"
+		label: "Estimated Ridership"
 	},
 	marks: [
-		Plot.dot(mtaDailyRidershipData, {x: "date", y: "ster"})
+		Plot.dot(mtaDailyRidershipData, {x: "date", y: "ster", tip: true}),
 	]
 })
 ```
