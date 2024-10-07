@@ -38,6 +38,14 @@ Plot.plot({
 		label: "Estimated Ridership"
 	},
 	marks: [
+		Plot.tip(
+			[`NYC implemented its COVID lockdown on March 23, 2020. Yet, the lockdown is partial, as non-essential workers are encouraged to work from home, while the public transit system continues to operate but with reduced schedules. Only after May 6, 2020, the subway system is shut down daily during 1–5 AM for cleaning`],
+			{x: new Date("2020-03-23"), dx: 40, anchor: "bottom"}
+		),
+		Plot.tip(
+			[`Phase 1 of the Four-phase reopening plan for New York State is met by New York City. `],
+			{x: new Date("2020-06-08"), dx: 80, anchor: "top"}
+		),
 		Plot.dot(mtaDailyRidershipData, {x: "date", y: "ster", tip: true}),
 	]
 })
