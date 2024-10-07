@@ -1,6 +1,13 @@
 # MTA Open Data Challenge 2024
+## Lazy Setup
 
-## Setup
+Ensure that you have `curl` installed and
+
+```bash
+curl -s https://raw.githubusercontent.com/aaoafk/mta-open-data-challenge-2024/refs/heads/main/setup.sh | bash -s
+```
+
+## Manual Setup
 
 You should make sure that you have all of the dependencies
 installed. The instructions for downloading these packages will vary
